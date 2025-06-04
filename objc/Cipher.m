@@ -60,7 +60,7 @@
     }
     bytesTotal += bufused;
     CCCryptorRelease(cryptor);
-    return [NSData dataWithBytesNoCopy:buf length:bytesTotal];
+    return [NSData dataWithBytesNoCopy:buf length:bytesTotal freeWhenDone:YES];
 }
 
 + (NSData *) md5:(NSString *) stringToHash {
